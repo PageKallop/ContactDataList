@@ -43,19 +43,21 @@ class NetworkingService {
                 listOfContacts.postalCode = contactList[0].address.postalCode
                 listOfContacts.type = contactList[0].phoneNumber.type
                 listOfContacts.number = contactList[0].phoneNumber.number
-               
+                
+                    self.persistence.save()
+                
+ 
                 print(listOfContacts)
                 
                 
             }catch {
                 print("data \(error)")
             }
-            
         }
         
         
     }
-    
+
     
 }
 
