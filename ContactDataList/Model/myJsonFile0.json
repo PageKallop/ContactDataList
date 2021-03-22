@@ -1,0 +1,83 @@
+{
+	"contacts": [
+	
+    {
+			"id": "307e33d6-6322-4425-bcbb-cbf40d89db3f",
+			"firstName": "John",
+			"lastName": "Smith",
+			
+    "address": {
+				"streetAddress": "21 2nd Street",
+				"city": "New York",
+				"state": "NY",
+				"postalCode": "10021"
+			},
+    
+    "phoneNumber": {
+				"type": "home",
+				"number": "212 555-1234"
+			}
+		},
+    
+		{
+			"id": "184d8b52-b204-4682-af06-8ecf86ca1efb",
+			"firstName": "Jane",
+			"lastName": "Smith",
+			"address": {
+				"streetAddress": "123 First Street",
+				"city": "Chicago",
+				"state": "IL",
+				"postalCode": "60647"
+			},
+			"phoneNumber": {
+				"type": "cell",
+				"number": "212 555-1098"
+			}
+		},
+		{
+			"id": "64977cca-98dd-4866-bd80-b3a906e78f79",
+			"firstName": "Paul",
+			"lastName": "Jones",
+			"address": {
+				"streetAddress": "909 W NortSt",
+				"city": "Austin",
+				"state": "TX",
+				"postalCode": "78741"
+			},
+			"phoneNumber": {
+				"type": "cell",
+				"number": "123-432-1234"
+			}
+		},
+		{
+			"id": "79f0ca9c-3166-4b4c-b65b-72e820e0157e",
+			"firstName": "Ana",
+			"lastName": "Johnson",
+			"address": {
+				"streetAddress": "787 N Elm St",
+				"city": "New Orleans",
+				"state": "LA",
+				"postalCode": "67654"
+			},
+			"phoneNumber": {
+				"type": "work",
+				"number": "121-344-4565"
+			}
+		},
+		{
+			"id": "fefea2d7-42d3-4140-926f-54878c1b8180",
+			"firstName": "Sally",
+			"lastName": "White",
+			"address": {
+				"streetAddress": "1110 Clariton Ave",
+				"city": "Pittsburgh",
+				"state": "PA",
+				"postalCode": "15025"
+			},
+			"phoneNumber": {
+				"type": "home",
+				"number": "655-454-7654"
+			}
+		}
+	]
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05D5971260824F000D1B57F /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D596F260824F000D1B57F /* Contact+CoreDataClass.swift */; };
+		C05D5972260824F000D1B57F /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05D5970260824F000D1B57F /* Contact+CoreDataProperties.swift */; };
 		C0F68ACF2607B4D2009A7A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68ACE2607B4D2009A7A04 /* AppDelegate.swift */; };
 		C0F68AD12607B4D2009A7A04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AD02607B4D2009A7A04 /* SceneDelegate.swift */; };
 		C0F68AD32607B4D2009A7A04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AD22607B4D2009A7A04 /* ViewController.swift */; };
@@ -14,9 +16,16 @@
 		C0F68AD92607B4D2009A7A04 /* ContactDataList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AD72607B4D2009A7A04 /* ContactDataList.xcdatamodeld */; };
 		C0F68ADB2607B4D3009A7A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F68ADA2607B4D3009A7A04 /* Assets.xcassets */; };
 		C0F68ADE2607B4D3009A7A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F68ADC2607B4D3009A7A04 /* LaunchScreen.storyboard */; };
+		C0F68AEE2607C9B7009A7A04 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AED2607C9B7009A7A04 /* NetworkingService.swift */; };
+		C0F68AF32607D186009A7A04 /* ContactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AF22607D186009A7A04 /* ContactData.swift */; };
+		C0F68AF72607D5DB009A7A04 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AF62607D5DB009A7A04 /* NetworkingService.swift */; };
+		C0F68AFA2607D619009A7A04 /* myJsonFile0.json in Resources */ = {isa = PBXBuildFile; fileRef = C0F68AF92607D619009A7A04 /* myJsonFile0.json */; };
+		C0F68AFD2607FB5E009A7A04 /* PersistentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F68AFC2607FB5E009A7A04 /* PersistentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C05D596F260824F000D1B57F /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Contact+CoreDataClass.swift"; path = "ContactDataList/Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C05D5970260824F000D1B57F /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Contact+CoreDataProperties.swift"; path = "ContactDataList/Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C0F68ACB2607B4D2009A7A04 /* ContactDataList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactDataList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F68ACE2607B4D2009A7A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F68AD02607B4D2009A7A04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,11 @@
 		C0F68ADA2607B4D3009A7A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F68ADD2607B4D3009A7A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F68ADF2607B4D3009A7A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F68AED2607C9B7009A7A04 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		C0F68AF22607D186009A7A04 /* ContactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactData.swift; sourceTree = "<group>"; };
+		C0F68AF62607D5DB009A7A04 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		C0F68AF92607D619009A7A04 /* myJsonFile0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = myJsonFile0.json; sourceTree = "<group>"; };
+		C0F68AFC2607FB5E009A7A04 /* PersistentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,8 @@
 		C0F68AC22607B4D2009A7A04 = {
 			isa = PBXGroup;
 			children = (
+				C05D596F260824F000D1B57F /* Contact+CoreDataClass.swift */,
+				C05D5970260824F000D1B57F /* Contact+CoreDataProperties.swift */,
 				C0F68ACD2607B4D2009A7A04 /* ContactDataList */,
 				C0F68ACC2607B4D2009A7A04 /* Products */,
 			);
@@ -61,6 +77,7 @@
 				C0F68ACE2607B4D2009A7A04 /* AppDelegate.swift */,
 				C0F68AD02607B4D2009A7A04 /* SceneDelegate.swift */,
 				C0F68AD22607B4D2009A7A04 /* ViewController.swift */,
+				C0F68AF02607D162009A7A04 /* Model */,
 				C0F68AD42607B4D2009A7A04 /* Main.storyboard */,
 				C0F68ADA2607B4D3009A7A04 /* Assets.xcassets */,
 				C0F68ADC2607B4D3009A7A04 /* LaunchScreen.storyboard */,
@@ -68,6 +85,18 @@
 				C0F68AD72607B4D2009A7A04 /* ContactDataList.xcdatamodeld */,
 			);
 			path = ContactDataList;
+			sourceTree = "<group>";
+		};
+		C0F68AF02607D162009A7A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0F68AED2607C9B7009A7A04 /* NetworkingService.swift */,
+				C0F68AF92607D619009A7A04 /* myJsonFile0.json */,
+				C0F68AF22607D186009A7A04 /* ContactData.swift */,
+				C0F68AF62607D5DB009A7A04 /* NetworkingService.swift */,
+				C0F68AFC2607FB5E009A7A04 /* PersistentService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F68AFA2607D619009A7A04 /* myJsonFile0.json in Resources */,
 				C0F68ADE2607B4D3009A7A04 /* LaunchScreen.storyboard in Resources */,
 				C0F68ADB2607B4D3009A7A04 /* Assets.xcassets in Resources */,
 				C0F68AD62607B4D2009A7A04 /* Main.storyboard in Resources */,
@@ -140,9 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F68AEE2607C9B7009A7A04 /* NetworkingService.swift in Sources */,
 				C0F68AD32607B4D2009A7A04 /* ViewController.swift in Sources */,
+				C0F68AF32607D186009A7A04 /* ContactData.swift in Sources */,
 				C0F68ACF2607B4D2009A7A04 /* AppDelegate.swift in Sources */,
+				C05D5971260824F000D1B57F /* Contact+CoreDataClass.swift in Sources */,
+				C0F68AFD2607FB5E009A7A04 /* PersistentService.swift in Sources */,
 				C0F68AD92607B4D2009A7A04 /* ContactDataList.xcdatamodeld in Sources */,
+				C0F68AF72607D5DB009A7A04 /* NetworkingService.swift in Sources */,
+				C05D5972260824F000D1B57F /* Contact+CoreDataProperties.swift in Sources */,
 				C0F68AD12607B4D2009A7A04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
