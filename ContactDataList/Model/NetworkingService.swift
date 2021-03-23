@@ -14,10 +14,6 @@ class NetworkingService {
     
     var contactListFull = [ContactData]()
     
-    init() {
-        getContacts()
-    }
-
     func getContacts() {
 
         if let path = Bundle.main.url(forResource: "myJsonFile0", withExtension: "json") {
@@ -26,23 +22,24 @@ class NetworkingService {
             do {
 
                 let data = try Data(contentsOf: path)
-                let jsonDecoder = JSONDecoder()
-
-                let dataFromJson = try jsonDecoder.decode(ContactData.self, from: data)
-                
-                if let json = try  JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
+//                let jsonDecoder = JSONDecoder()
+                print(data)
+//                let dataFromJson = try jsonDecoder.decode(ContactData.self, from: data)
+        
+                if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
                     print(json)
+               
                     guard let itemsJsonArray = json["contact"] as? [[String: AnyObject]]
                    
                     else { return
                     }
             
-                }
+             }
                 
               func createContactEntity(dictionary: [String: AnyObject]) {
                 
-                let contactList = dataFromJson.contacts
-                let listOfContacts = Contact(context: persistence.context)
+//                let contactList = dataFromJson.contacts
+//                let listOfContacts = Contact(context: persistence.context)
                     
                     let context = PersistentService.shared.persistentContainer.viewContext
                     if let contactEntity = NSEntityDescription.insertNewObject(forEntityName: "Contact", into: context) as? Contact {
@@ -62,6 +59,18 @@ class NetworkingService {
                     }
                     
                    print(context)
+                func save(array: [[String: AnyObject]]) {
+                    
+                    _ = array.map{ createContactEntity(dictionary: $0)}
+                    do {
+                        try
+                            PersistentService.shared.persistentContainer.viewContext.save()
+                    } catch {
+                    
+                            print("error saving contact\(error)")
+                        
+                    }
+                }
                     
                 
                    
@@ -110,11 +119,3 @@ class NetworkingService {
 
 
 
-class DataImporter {
-  let importContext: NSManagedObjectContext
-
-  init(persistentContainer: NSPersistentContainer) {
-    importContext = persistentContainer.newBackgroundContext()
-    importContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-  }
-}
