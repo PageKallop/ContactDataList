@@ -38,7 +38,6 @@ class PersistentService {
         if context.hasChanges {
             do {
                 try context.save()
-                print("save dataaaa")
             } catch {
              
                 let nserror = error as NSError

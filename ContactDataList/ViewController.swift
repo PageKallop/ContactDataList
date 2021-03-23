@@ -14,30 +14,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var fetchedResultsController: NSFetchedResultsController<Contact>!
 
     let viewContext = PersistentService.shared.persistentContainer.viewContext
+    
+    var networkService = NetworkingService()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+ 
         tableViewConstraints()
         loadSavedData()
      
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-      
+        //registers cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     
 
-
+  //creates tableview
     let tableView : UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
-    
+    //creates tableview constraints
     func tableViewConstraints() {
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -66,26 +69,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    
+    //notifies receiver that the fetched results controller has completed processing
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return fetchedResultsController.sections?.count ?? 1
-    }
 
+    
+    // notifies receiver fetched results is about to update
     internal func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
     
+    //returns number of rows with contact
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionList = fetchedResultsController.sections?[section]
         
         return sectionList!.numberOfObjects
     }
     
+    //creates reusable cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -95,39 +98,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = list.city
         return cell 
     }
-    
-    
-//
-//
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-//        switch type {
-//        case .insert:
-//            tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
-//        case .delete:
-//            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
-//        case .move:
-//            break
-//        case .update:
-//            break
-//        @unknown default:
-//            print("Error")
-//        }
-//    }
-//
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-//        switch type {
-//        case .insert:
-//            tableView.insertRows(at: [newIndexPath!], with: .fade)
-//        case .delete:
-//            tableView.deleteRows(at: [indexPath!], with: .fade)
-//        case .update:
-//            tableView.reloadRows(at: [indexPath!], with: .fade)
-//        case .move:
-//            tableView.moveRow(at: indexPath!, to: newIndexPath!)
-//        @unknown default:
-//            print("Error")
-//        }
-//    }
+
 
 }
 
