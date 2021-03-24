@@ -15,12 +15,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     let viewContext = PersistentService.shared.persistentContainer.viewContext
     
-    var networkService = NetworkingService()
+    let networkService = NetworkingService()
+    
+    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        networkService.getContacts { (results) in
+            print(results)
+        }
+        
         view.addSubview(tableView)
+        print(networkService.persistence.context)
  
         tableViewConstraints()
         loadSavedData()
