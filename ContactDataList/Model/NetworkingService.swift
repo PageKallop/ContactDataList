@@ -55,7 +55,7 @@ class NetworkingService {
                 
                 
             }
-
+            //saves data to core data 
             func save(array: [[String: AnyObject]]) {
                 
                 _ = array.map{ createContactEntity(dictionary: $0)}
